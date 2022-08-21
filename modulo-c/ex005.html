@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font: normal 18pt;
+        }
+        div#msg{
+            font: normal 20pt arial;
+            color: white;
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            line-height: 300px;
+            margin-left: 620px;/* Margin top, left, right, bottom servem para afastar um elemento das bordas de uma página*/
+            margin-top: 200px;
+            border: 20px solid black;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1> Iniciando estudos de DOM </h1>
+    <p>Aqui vai o resultado.</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        /*var p1= document.getElementsByTagName('p')[1] //usado para pegar o 1º parágrafo.
+        window.document.write('Está escrito assim: ' + p1.innerText)// se colocar innerHTML ele vai pegar tudo o que estiver dentro da tag<p>
+        p1.style.color = 'gray'
+        p1.style.background = ''
+        var corpo = document.body
+        corpo.style.color = 'white'
+        corpo.style.background = 'black'
+        var d = document.getElementById('msg')
+        d.style.background = 'green'//aqui a tag div ficará em verde*/
+        //var d = document.getElementsByName('msg')[0]
+        //d.innerText = 'Olá'
+        var d = document.querySelector('div#msg')
+        d.style.background = 'red'
+        
+        var mouse= document.querySelector('div#msg')
+        mouse.addEventListener ('click', clicar)
+        mouse.addEventListener ('mouseenter', entrar)
+        mouse.addEventListener ('mouseout', sair)
+        function clicar(){
+            mouse.innerText = 'clicou'
+            mouse.style.background = 'blue'
+        }
+        function entrar() {
+            mouse.innerText = 'Entrou!'
+            mouse.style.background = 'green'
+        }
+        function sair(){
+            mouse.innerText = 'Saiu'
+            mouse.style.background = 'Pink'
+        }
+    </script>
+
+</body>
+</html>

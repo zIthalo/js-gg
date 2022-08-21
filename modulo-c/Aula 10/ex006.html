@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px; /*Este comando vai alinhar o texto do bloco no meio dele baseando-se nos poxels da altura*/
+            text-align: center; /*Alinha o texto ao meio*/ 
+            margin-left: 650px; /*Usando o margin left, top, right ou bottom fará minha div se afastar das extremidades, neste caso com os dois valores margin eu estou colocando esta div centralizada*/
+            margin-top: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area"><!--Lá no JS eu chamei esta div para fazer uma interação com ela de clicks-->
+        <!--Se eu preferisse poderia colocar todas as interações por aqui e depois criar as funções no meu JS-->
+        Interaja...
+    </div>
+    <script>
+        var a = document.getElementById('area')//Andes de colocar qualquer evendo em uma div primeior crie uma div para ela
+        a.addEventListener('click', clicar) //Você põe desta forma para não poluir o seu html
+        a.addEventListener('mouseenter', entrar)//Ou você pode colocar estas funções dentro do seu html na área div
+        a.addEventListener('mouseout', sair)
+        a.addEventListener('mousedown', segurou)
+        function clicar() {
+            a.innerText = 'Clicou!'//o innerText irá adicionar o texto no meu bloco
+            a.style.background = 'red' // aqui usamos o comando para mudar a cor do fundo quando for acionada esta função
+        }
+        function entrar() {
+            a.innerText = 'Entrou!' 
+        }
+        function sair(){
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+        var corpo = document.getElementsByTagName('body');
+        corpo.style.background = 'black'
+    </script>
+</body>
+</html>
