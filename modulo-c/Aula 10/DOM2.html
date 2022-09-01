@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            border-radius: 10px;
+            font: normal 1.3em arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px; /*Este comando vai alinhar o texto do bloco no meio dele baseando-se nos pixels da altura*/
+            text-align: center; /*Alinha o texto ao meio*/ 
+            margin: auto;
+            /*margin-left: 650px; /*Usando o margin left, top, right ou bottom fará minha div se afastar das extremidades, neste caso com os dois valores margin eu estou colocando esta div centralizada*/
+            /*margin-top: 300px;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="area"><!--Lá no JS eu chamei esta div para fazer uma interação com ela de clicks-->
+        <!--Se eu preferisse poderia colocar todas as interações por aqui e depois criar as funções no meu JS que seria por exemplo onclick="clicar" [entre aspas você colocar o nome da ação para declarar na função], onmouseenter, onmouseout-->
+        Interaja...
+    </div>
+    <script>
+        /*Procure, depois por JavaScript DOM events lists e vá no site da mozilla Event Reference*/
+        var a = document.getElementById('area')//Antes de colocar qualquer evento em uma div primeiro crie uma var para ela
+        a.addEventListener('click', clicar) //Você põe os comandos desta forma para não poluir o seu html, ou seja, você somente declara eles aqui na área script.
+        a.addEventListener('mouseenter', entrar)//Ou você pode colocar estas funções dentro do seu html na área div
+        a.addEventListener('mouseout', sair)
+        a.addEventListener('mousedown', segurou)
+        a.addEventListener('mouseup', soltou)
+        function clicar() {
+            a.innerText = 'Clicou!'//o innerText irá adicionar o texto no meu bloco
+            a.style.background = 'red' // aqui usamos o comando para mudar a cor do fundo quando for acionada esta função
+        }
+        function entrar() {
+            a.innerText = 'Entrou!'
+            a.style.background = 'skyblue'
+        }
+        function sair(){
+            a.innerText = 'Saiu!'
+            a.style.background = 'orange'
+            a.innerText = 'Interaja. . . .'
+        }
+        function segurou(){
+            a.innerText = 'Segurando...'
+            a.style.background = 'blue'
+        }
+        function soltou(){
+            a.innerText = 'Soltou.'
+        }
+        var c = document.body
+        c.style.background = 'black'
+        
+        /*As funções para funcionar, no caso de uma tag, você precisa dar um nome a ela e este nome será a ação. 
+            
+            Certo, mas como dar um nome a função?
+
+        1st crie uma variável para a div ou qualquer tag faça o seguinte:
+        var a = document.getElementById('area') neste caso criamos uma var, usamos o método get e chamamos nos parênteses o nome do id da div, depois disso nós podemos começar a colocar os eventos.
+
+            E como colocar os eventos?
+        Faça o seguinte, coloque o nome da variável, um ponto e depois o comando addEventListener('click', clicar) depois de colocar o comando, coloque a funcionalidade que no caso foi click e depois da vírgula coloque o nome da ação que pode ser o nome da sua preferência, neste caso foi o nome clicar.
+
+            E agora posso criar a função?
+        Sim. coloque o comando function, depois dê o nome da ação com parêntesis após o nome, neste caso foi o clicar(), depois abra o bloco {} e por último coloque comandos de adicionar textos como .innerText/HTML ou para adicionar estilo .style.background/color/etc o comando function ficará assim:
+
+        function clicar() {
+            a.innerText = 'Clicou!'//o innerText irá adicionar o texto no meu bloco
+            a.style.background = 'red' // aqui usamos o comando para mudar a cor do fundo quando for acionada esta função
+        }
+        */
+    </script>
+</body>
+</html>
