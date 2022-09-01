@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM1</title>
+    <style>
+        body{
+            background-color: rgb(98, 170, 201);
+            font-family: Arial, Helvetica, sans-serif;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Iniciando estudos com DOM
+    </h1>
+    
+    <p>
+        Aqui vai o resultado
+    </p>
+    
+    <p>
+        Aprendendo a usar o <strong>DOM</strong> em JavaScript
+    </p>
+    
+    <div id="msg">
+        Clique em mim
+    </div>
+
+    <h2>
+        Parte 2
+    </h2>
+
+    <p>
+        Jhow parêa
+    </p>
+
+    <section>
+        Parêa Jow
+    </section>
+
+    <script>
+        /*
+        Árvore hierárquica DOM:
+
+        Todo comando em JS está dentro de um objeto chamado window que é a janela do navegador
+        dentro de window temos location = que é a url do site, document = documento atual, history = de onde você veio para onde vai
+
+        Dentro do document = vem o html que dentro dele vem o head e body, dentro de head vem as tags meta e title
+        dentro do body vêm as tags p h1 div h2 etc
+
+        o que vem dentro é child e quem está em cima abraçando as demais tags é chamado de parent
+        */
+
+        window.document.writeln('Olá, mundo! <br/>')
+        document.writeln(window.document.charset)//Qual é o tipo de caracter usado?
+        document.writeln(window.document.URL)//Qual é a url do site?
+
+        /*
+        Selecionando
+
+        Por Marca
+
+        document.getElementsByTagName()
+        var p1 = document.getElementsByTagName('p')[0]//nos colchetes vai o número do parágrafo que você vai usar neste caso o número 0 representa o 1º parágrafo
+        e por exemplo se você quiser colocar um estilo através do Js você vai utilizar este comando
+        nome da var + .style.color = "nome da cor"
+        ex↓
+        */
+       var corpo = document.body
+       var p1 = document.getElementsByTagName('p')[0]
+       var p2 = document.getElementsByTagName('p')[1]
+       document.writeln('Está escrito assim: ' + p1.innerText + '<br/>')// o inner text pega somente o texto se você colocar innerHTML vai pegar o texto e todas as filhas 
+       document.writeln('Está Escrito assim: ' + p2.innerHTML)
+       corpo.style.background = 'rgb(98, 170, 201)' //mudando o background da página para verde amarelado
+       p1.style.color = "white"
+
+       /*
+       Você pode utilizar o getElementById() para pegar por ID
+       Por nome document.getElementsByName()
+       Por classe document.getElementsByClass()
+       por seletor document.querySelector
+       
+       */
+      /*var d = document.getElementById('msg')
+      d.style.background = 'red'
+      document.writeln('pepeks' + d.innerText)
+        */
+       let d = document.querySelector('div#msg')
+      d.style.color = 'red'
+      d.style.background = 'aqua'
+        
+    </script>
+</body>
+</html>
