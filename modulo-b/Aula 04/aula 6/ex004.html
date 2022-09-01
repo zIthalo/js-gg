@@ -16,9 +16,24 @@
     <script>
 
        var nome = prompt('Digite o seu nome:')
-       document.write(`Olá, <strong>${nome}!</strong> Seu nome tem ${nome.length} letras.<br/>`)
-       document.write(`Seu nome em maiúsculas fica ${nome.toUpperCase()}<br/>`)
+       document.write(`Olá, <strong>${nome}!</strong> Seu nome tem ${nome.length} letras.<br/>`) //para saber quantas letras tem em uma variável do tipo string é só colocar o .length depois do nome da variável
+       // Usei a tag <br/> para pular uma linha
+       document.writeln(`Seu nome em maiúsculas fica ${nome.toUpperCase()}<br/>`)
        document.write(`Seu nome em minúsculas fica ${nome.toLocaleLowerCase()}`)
+       //outro comando do tipo escreva que escreve na tela do site
+       /*veja o seguinte exemplo do node
+       var n1 = 150.5
+        n1
+        150.5 //se você quiser colocar duas casas decimais depois do ponto faça:
+        n1.toFixed(2)
+        150.50 ;)
+        E para você trocar este ponto que separa as casas decimais por vírgola faça
+        n1.toFixed(2).replace('.', ',') //Lê-se:ithalo onde tiver ponto(.) coloque vírgula(,)
+        150,50
+        se você quiser colocar como se fosse um valor em real brl você faria assim
+        n1.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})
+
+       */
     </script>
 </body>
 </html>
