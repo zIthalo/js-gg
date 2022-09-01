@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores p2</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        Relacionais       |       Lógico
+
+        < menor             ! = negação = não
+        > maior             && = conjunção = E só dá true se 2 valores forem true
+        >= maior ou igual   ||= disjunção = OU só dá false se 2 valores forem false
+        <= menor ou igual   
+        == igual            
+        != diferente        
+        === idêntico        
+
+        5 > 4 true
+        3 < 2 false
+        6 >= 6 true
+        9 <= 5 false
+        8 == '8' true no caso do JS
+        2 != 2 false
+        8 === '8' false
+        se tiver um operador aritmético em uma expressão com teste lógico o primeiro a ser efetuado será o aritmético
+
+        ordem dos operadores 1º aritméticos, 2º relacionais, 3º lógicos
+
+        testes no node
+        
+        var a = 3
+        var b = 2
+        
+        true && false 
+        false
+        true || false 
+        true
+
+        1º != 
+        2º && 
+        3º ||
+
+        idade >= 15 && idade <= 17 //a idade é maior ou igual a 15 e idade é maior ou igual a 17?
+        estado == 'RJ' || estado == 'SP' //estado é igual a rio ou são paulo
+        salário > 1500 && sexo != 'M' //o salário é 1500 e não é homem
+
+        Operador ternário
+        
+        teste ? true : false
+
+        No node este exemplo ficaria:
+        
+        média >= 7.0 ? 'aprovado' : 'reprovado'
+        'Aprovado'
+
+        //você pode fazer testes ternários diretamente de uma variável ↓
+        var x = 8
+        var res = x % 2 == 0 ? 5 : 9 
+        undefined
+        res
+        5
+
+        */
+    </script>
+</body>
+</html>
