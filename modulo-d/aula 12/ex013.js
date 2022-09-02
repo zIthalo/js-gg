@@ -70,7 +70,7 @@ switch(diaSem){
 
 if (hora < 12){
     console.log('Bom dia <3')
-}else if (hora > 12){
+}else if (hora > 12 && hora < 18){
     console.log('Boa tarde <3')
 }else if (hora > 18){
     console.log('Boa noite <3')
