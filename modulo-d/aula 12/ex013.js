@@ -31,33 +31,35 @@ var agora = new Date()
 var diaSem = agora.getDay()
 var hora = agora.getHours()
 var minuto = agora.getMinutes()
+
 switch(diaSem){
     case 0:
         console.log(`Domingo. São ${hora} : ${minuto}`)
     break
     
     case 1:
-        console.log(`Segunda-Feira. São ${hora} : ${minuto}`)
+        console.log(`Segunda-Feira
+        ${date}. São ${hora} : ${minuto}`)
     break
 
     case 2:
-        console.log(`Terça-Feira. São ${hora} : ${minuto}`)
+        console.log(`Terça-Feira ${date}. São ${hora} : ${minuto}`)
     break
 
     case 3:
-        console.log(`Quarta-Feira. São ${hora} : ${minuto}`)
+        console.log(`Quarta-Feira ${date}. São ${hora} : ${minuto}`)
     break
 
     case 4:
-        console.log(`Quinta-Feira. São ${hora} : ${minuto}`)
+        console.log(`Quinta-Feira ${date}. São ${hora} : ${minuto}`)
     break
 
     case 5:
-        console.log(`Sexta-Feira. São ${hora} : ${minuto}`)
+        console.log(`Sexta-Feira ${date}. São ${hora} : ${minuto}`)
     break
 
     case 6:
-        console.log(`Sábado. São ${hora} : ${minuto}`)
+        console.log(`Sábado ${date}. São ${hora} : ${minuto}`)
     break
 
     default:
@@ -65,3 +67,11 @@ switch(diaSem){
 }   
 // aperfeiçoei todo o código o switch case ele só serve para valores pontuais e não para intervalos de tempo como o if else
 // use apenas strings e números
+
+if (hora < 12){
+    console.log('Bom dia <3')
+}else if (hora > 12){
+    console.log('Boa tarde <3')
+}else if (hora > 18){
+    console.log('Boa noite <3')
+}
