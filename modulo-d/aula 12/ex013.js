@@ -43,23 +43,23 @@ switch(diaSem){
     break
 
     case 2:
-        console.log(`Terça-Feira ${date}. São ${hora} : ${minuto}`)
+        console.log(`Terça-Feira. São ${hora} : ${minuto}`)
     break
 
     case 3:
-        console.log(`Quarta-Feira ${date}. São ${hora} : ${minuto}`)
+        console.log(`Quarta-Feira. São ${hora} : ${minuto}`)
     break
 
     case 4:
-        console.log(`Quinta-Feira ${date}. São ${hora} : ${minuto}`)
+        console.log(`Quinta-Feira. São ${hora} : ${minuto}`)
     break
 
     case 5:
-        console.log(`Sexta-Feira ${date}. São ${hora} : ${minuto}`)
+        console.log(`Sexta-Feira. São ${hora} : ${minuto}`)
     break
 
     case 6:
-        console.log(`Sábado ${date}. São ${hora} : ${minuto}`)
+        console.log(`Sábado. São ${hora} : ${minuto}`)
     break
 
     default:
