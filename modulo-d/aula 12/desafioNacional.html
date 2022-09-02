@@ -4,18 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Teste</title>
+    <style>
+        body{
+            background-color: rgb(133, 127, 255);
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+    </style>
 </head>
 <body>
-    <h1>Teste de nacionalidade hehe</h1>
+    <h1>Teste de nacionalidade </h1>
     <p>Digite o seu país natal: <input type="text" id="txtnac"> <input type="button" value="verificar 
 nacionalidade" id="check"></p>
 <div id="res"></div>
 
+<h2>Aproveite e use a nossa calculadora</h2>
+<input type="number" name="soma" id="soma"> +
+<input type="number" name="soma1" id="soma1">
+<input type="button" value="somar" id="somar">
+<div class="res"></div>
 <script>
 
     var check = document.querySelector('input#check')
     check.addEventListener('click', checar)
+    var som = document.querySelector('input#somar')
+    som.addEventListener('click', somar)
 
     function checar(){
         var tnac = document.querySelector('input#txtnac')
@@ -27,6 +41,16 @@ nacionalidade" id="check"></p>
         } else {
             res.innerHTML = `Você nasceu no(s) ${nac}. Você é gringo.`
         }
+    }
+
+    function somar(){
+        var soma = document.querySelector('input#soma')
+        var soma1 = document.querySelector('input#soma1')
+        var res1 = document.querySelector('div.res')
+        var s1 = Number(soma.value)
+        var s2 = Number(soma1.value)
+        var s = s1 + s2
+        res.innerHTML = `${s1} + ${s2} = ${s}`
     }
     
 </script>
