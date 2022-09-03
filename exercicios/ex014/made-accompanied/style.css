@@ -16,9 +16,12 @@ section{
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.316);
 }
-#imagem{
+div{
+    text-align: center;
+}
+#img{
     border-radius: 50%;
-    
+    width: 250px;
 }
 
 footer{

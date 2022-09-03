@@ -1,24 +1,28 @@
 body{
     background-color: rgb(75, 75, 255);
     font: normal 15pt arial;
-    color: white;
 }
 header{
    text-align: center;
+   color: white;
 }
 section{
     background: white;
     border-radius: 15px;
-    box-shadow: 5px 5px 10px rgb(00, 00,00);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.284);
     width: 500px;
     margin: auto;
     padding: 10px;
 }
+#img{
+    border-radius: 50%;
+    width: 250px;
+}
 div{
     text-align: center;
-    align-items: center;
 }
 footer{
     font-style: italic;
     text-align: center;
+    color: white;
 }
