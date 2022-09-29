@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../html-css-gg"
+		},
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../Mercadinho"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "js-gg"
+	}
+}
