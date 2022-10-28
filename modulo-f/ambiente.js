@@ -1,4 +1,4 @@
-let num = [ 5, 8, 4] //para criar uma array é só declara ruma variável e colocar para ela receber chaves
+let num = [ 5, 8, 4] //para criar uma array é só declarar uma variável e colocar para ela receber chaves
 
 num.push(2) //significa criar mais um espaço na array e adicionar o valor que estiver dentro dos parênteses neste caso foi o 2. Ou seja, a array que tinha 3 casas agora passará a ter 4
 num.sort() // este comando vai colocar todos os números em ordem crescente
