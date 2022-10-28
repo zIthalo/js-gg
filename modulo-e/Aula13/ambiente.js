@@ -37,7 +37,9 @@ while (c <= 10) {
     c++
 }*/
 
-var c = 10
+//Passo a passo do while 1º crie a variável, depois crie a estrutura do{ aqui vai o console.log e o incremento e decremento} 3º por fim o while (c >= 0)
+
+let c = 10
 do{
     console.log(`Passo ${c}`)
     --c
