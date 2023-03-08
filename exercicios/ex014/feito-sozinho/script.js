@@ -3,7 +3,7 @@ function carregar(){
     var img = document.querySelector('img#img')
     // Todo o defeito estava aqu, eu estava selecionando o id da div e não da img mais uma vitória para ithalo \o/
     var data = new Date()
-    var hora = data.getHours()
+    var hora = 10
     var min = data.getMinutes()
     msg.innerHTML = `Agora são ${hora}:${min}`
     if(hora >= 0 && hora < 12){
