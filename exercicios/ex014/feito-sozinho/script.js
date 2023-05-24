@@ -1,7 +1,7 @@
 function carregar(){
     var msg = document.getElementById ('msg')
     var img = document.querySelector('img#img')
-    // Todo o defeito estava aqu, eu estava selecionando o id da div e não da img mais uma vitória para ithalo \o/
+    // Todo o defeito estava aqui, eu estava selecionando o id da div e não da img mais uma vitória para ithalo \o/
     var data = new Date()
     var hora = 10
     var min = data.getMinutes()
